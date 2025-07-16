@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENGEN - Our Mental Health Professionals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meet Our Mental Health Professionals</h1>
+        <p>Qualified and empathetic professionals ready to assist you</p>
+    </header>
+
+    <section>
+        <div class="doctor-profile">
+            <img src="doctor1.jpg" alt="Dr. Jane Doe" class="doctor-photo">
+            <h2>Dr. Jane Doe</h2>
+            <p><strong>Specialization:</strong> Child & Adolescent Psychiatry</p>
+            <p><strong>Email:</strong> janedoe@zengen.org</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Address:</strong> 123 Wellness St, Mind City</p>
+            <button class="book-btn" onclick="openBookingForm('Dr. Jane Doe')">Book Appointment</button>
+        </div>
+
+        <div class="doctor-profile">
+            <img src="doctor2.jpg" alt="Dr. John Smith" class="doctor-photo">
+            <h2>Dr. John Smith</h2>
+            <p><strong>Specialization:</strong> Clinical Psychologist</p>
+            <p><strong>Email:</strong> johnsmith@zengen.org</p>
+            <p><strong>Phone:</strong> +1 (555) 234-5678</p>
+            <p><strong>Address:</strong> 456 Therapy Ave, Health Town</p>
+            <button class="book-btn" onclick="openBookingForm('Dr. John Smith')">Book Appointment</button>
+        </div>
+
+        <!-- Additional doctor profiles can be added similarly -->
+    </section>
+
+    <!-- Booking Form Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>Book an Appointment with <span id="doctorName"></span></h2>
+            <form action="#" method="post">
+                <label for="patient-name">Your Name:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+
+                <label for="appointment-date">Preferred Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">Preferred Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ZENGEN. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to open the booking form modal
+        function openBookingForm(doctorName) {
+            document.getElementById("doctorName").textContent = doctorName;
+            document.getElementById("bookingModal").style.display = "block";
+        }
+
+        // Function to close the booking form modal
+        function closeBookingForm() {
+            document.getElementById("bookingModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("bookingModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

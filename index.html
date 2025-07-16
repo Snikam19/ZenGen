@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENGEN - Empowering Teen Mental Health</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin: 15px 0;
+        }
+
+        blockquote {
+            margin: 15px 0;
+            padding: 10px;
+            background: #e9ecef;
+            border-left: 5px solid #4CAF50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+        <h1>ZENGEN</h1>
+        <p>Your Interactive Platform for Teen Mental Health Support</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>ZENGEN is dedicated to empowering teens through interactive mental health support, offering resources, community, and guidance to foster emotional well-being.</p>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Interactive Workshops</li>
+            <li>Peer Support Groups</li>
+            <li>Resource Library</li>
+            <li>24/7 Helpline</li>
+            <li>Mindfulness and Wellness Tools</li>
+        </ul>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Teens Say</h2>
+        <blockquote>
+            <p>"ZENGEN helped me find my voice and connect with others who understand." - Sarah, 16</p>
+        </blockquote>
+        <blockquote>
+            <p>"I feel more confident and supported thanks to ZENGEN." - Jake, 15</p>
+        </blockquote>
+    </section>
+    <!-- The content remains as before -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="doctors.html" method="get">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById("contactForm").onsubmit = function(event) {
+            event.preventDefault();
+            window.location.href = "doctors.html";
+        };
+    </script>
+</body>
+</html>
